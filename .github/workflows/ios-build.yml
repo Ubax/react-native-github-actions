@@ -1,0 +1,32 @@
+name: Test iOS build
+on:
+  pull_request:
+    branches: 
+      - master
+    paths:
+      - 'ios/**'
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: macos-latest
+    concurrency:
+      group: ios-build-${{ github.ref }}
+      cancel-in-progress: true
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          cache: 'yarn'
+      - name: Install node dependencies
+        run: yarn
+      - name: Install pods
+        working-directory: ios
+        run: pod install
+      - name: Build app
+        run: yarn ios
