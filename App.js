@@ -19,11 +19,13 @@ import {
 import Currencies from './src/Currencies';
 import Sum from './src/Sum';
 import Timer from './src/Timer';
+import People from './src/People';
 
 const PROBLEMS = {
   Sum: <Sum />,
   Timer: <Timer />,
   Currencies: <Currencies />,
+  People: <People />,
 };
 
 function App() {
