@@ -19,13 +19,13 @@ import {
 import Currencies from './src/Currencies';
 import Sum from './src/Sum';
 import Timer from './src/Timer';
-import People from './src/People';
+import BarCode from './src/BarCode';
 
 const PROBLEMS = {
   Sum: <Sum />,
   Timer: <Timer />,
   Currencies: <Currencies />,
-  People: <People />,
+  'Bar Code': <BarCode />,
 };
 
 function App() {
