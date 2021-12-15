@@ -20,12 +20,14 @@ import Currencies from './src/Currencies';
 import Sum from './src/Sum';
 import Timer from './src/Timer';
 import BarCode from './src/BarCode';
+import ToDo from './src/ToDo';
 
 const PROBLEMS = {
   Sum: <Sum />,
   Timer: <Timer />,
   Currencies: <Currencies />,
   'Bar Code': <BarCode />,
+  'ToDo list': <ToDo />,
 };
 
 function App() {
