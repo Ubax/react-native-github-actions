@@ -35,7 +35,6 @@ function App() {
   const problem = PROBLEMS[problemName];
   return (
     <SafeAreaView>
-      <StatusBar />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
         <View style={{flex: 1, marginHorizontal: 12}}>
           <Text style={styles.header}>Bug hunting</Text>
