@@ -7,7 +7,7 @@ function superHardOperation(x) {
   return (1 / x + 6) * x * 20;
 }
 
-export default function People() {
+export default function BarCode() {
   return (
     <View>
       {data.map((x, i) => (
